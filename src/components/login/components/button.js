@@ -32,8 +32,9 @@ const styles = StyleSheet.create({
     marginTop: hp('5%'),
   },
   text: {
-    fontSize: 25,
-    fontFamily: 'Itim-Regular',
+    fontSize: 22,
+    fontFamily: 'TimesNewRoman',
+    fontWeight: 'bold'
   },
 });
 

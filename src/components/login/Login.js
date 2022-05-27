@@ -30,7 +30,7 @@ class Login extends Component {
     };
   }
 
-  showToast = (text, type, duration = 2000, buttonText = 'Okey') => {
+  showToast = (text, type, duration = 2000, buttonText = 'Got it') => {
     Toast.show({
       text,
       buttonText,
@@ -114,22 +114,24 @@ class Login extends Component {
                 value={this.state.password}
                 onChangeText={this.changeTextPass}
                 secureTextEntry={true}></TextInput>
+              <Button onPress={this.moveToMain} label={'Login'}></Button>
               <TouchableOpacity
                 style={styles.forgot}
                 onPress={this.moveToForgotPassword}>
-                <Text style={styles.textRegister}>Forgot your password?</Text>
+                <Text style={styles.textRegister}>Forgot password?</Text>
               </TouchableOpacity>
-              <Button onPress={this.moveToMain} label={'Login'}></Button>
             </View>
             <View style={styles.textRegisterContainer}>
-              <Text style={styles.textRegister1}>New user? </Text>
+              <Text style={styles.textRegister1}>Not having an account?</Text>
+            </View>
+            <View style={styles.textRegisterContainerDown}>
               <TouchableOpacity onPress={this.moveToRegisterIter}>
-                <Text style={styles.textRegister}>Register Iter</Text>
+                <Text style={styles.textRegister}>Iter Register</Text>
               </TouchableOpacity>
             </View>
             <View style={styles.textRegisterContainerDown}>
               <TouchableOpacity onPress={this.moveToRegisterCompany}>
-                <Text style={styles.textRegister}>Company</Text>
+                <Text style={styles.textRegister}>Company Register</Text>
               </TouchableOpacity>
             </View>
           </ScrollView>
@@ -166,13 +168,14 @@ const styles = StyleSheet.create({
     marginLeft: wp('15%'),
   },
   text: {
-    fontFamily: 'Itim-Regular',
-    fontSize: 40,
+    fontFamily: 'TimesNewRoman',
+    fontSize: 36,
+    fontWeight: "bold"
   },
   textRegisterContainer: {
     display: 'flex',
     flexDirection: 'row',
-    marginTop: hp('10%'),
+    marginTop: hp('3%'),
     width: wp('90%'),
     alignItems: 'center',
     justifyContent: 'center',
@@ -180,7 +183,7 @@ const styles = StyleSheet.create({
   textRegisterContainerDown: {
     display: 'flex',
     flexDirection: 'row',
-    marginTop: hp('1%'),
+    marginTop: hp('0%'),
     width: wp('90%'),
     alignItems: 'center',
     justifyContent: 'center',
@@ -190,7 +193,6 @@ const styles = StyleSheet.create({
     fontFamily: 'Itim-Regular',
   },
   textRegister: {
-    marginLeft: 3,
     color: '#85adfc',
     fontSize: 20,
     fontFamily: 'Itim-Regular',
@@ -201,6 +203,6 @@ const styles = StyleSheet.create({
   forgot: {
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: hp('3%'),
+    marginTop: hp('1%'),
   },
 });

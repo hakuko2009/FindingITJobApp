@@ -98,18 +98,18 @@ export class Landing extends Component {
           }}>
           <Image
             source={require('../../assets/image/landing.png')}
-            style={{height: 150, width: 150}}></Image>
+            style={{height: 160, width: 160}}></Image>
         </View>
         <View style={styles.buttonEmailContainer}>
           <TouchableOpacity style={styles.loginEmailBtn} onPress={this.clear}>
-            <Text style={styles.loginText}>Guest</Text>
+            <Text style={styles.loginText}>View as Guest</Text>
           </TouchableOpacity>
         </View>
         <View style={styles.buttonContainer}>
           <TouchableOpacity
             style={styles.loginBtn}
             onPress={this.moveToLoginAccount}>
-            <Text style={styles.loginText}>Login with Account</Text>
+            <Text style={styles.loginText}>Login to explore more</Text>
           </TouchableOpacity>
         </View>
       </LinearGradient>
@@ -128,17 +128,17 @@ const styles = StyleSheet.create({
   },
   oval1: {
     position: 'absolute',
-    width: 80,
-    height: 80,
+    width: 75,
+    height: 75,
     borderRadius: 100 / 2,
-    backgroundColor: '#596DFF',
+    backgroundColor: '#d11111',
   },
   oval2: {
     position: 'absolute',
-    width: 80,
-    height: 80,
+    width: 75,
+    height: 75,
     borderRadius: 100 / 2,
-    backgroundColor: 'rgba(250, 96, 125, 0.5)',
+    backgroundColor: '#5ae8c9',
   },
   buttonEmailContainer: {
     display: 'flex',
@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     width: windowWidth * 0.7,
     height: 55,
     left: 0.15 * windowWidth,
-    top: windowHeight * 0.526,
+    top: windowHeight * 0.575,
   },
   buttonContainer: {
     display: 'flex',
@@ -156,7 +156,7 @@ const styles = StyleSheet.create({
     width: windowWidth * 0.7,
     height: 55,
     left: 0.15 * windowWidth,
-    top: 0.657 * windowHeight,
+    top: 0.695 * windowHeight,
   },
   loginEmailBtn: {
     width: '100%',

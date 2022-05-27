@@ -3,7 +3,7 @@ import _ from 'lodash';
 import {connect} from 'react-redux';
 import {Toast} from 'native-base';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-import {JobDetail} from './jobDtail';
+import {JobDetail} from './jobDetails';
 import {applyJob, searchJob, savePost, getSavedPost} from '../../redux/actions';
 import {getData} from '../../utils';
 import {Loader, CardItem, SearchBar} from '../../common';
@@ -154,7 +154,7 @@ class Search extends Component {
     if (this.state.role == 'iter' || !this.state.role) {
       return (
         <TouchableHighlight
-          style={{...styles.openButton, backgroundColor: '#37ce3f'}}
+          style={{...styles.openButton, backgroundColor: '#4e8ad4'}}
           onPress={this.iterApplyJob}>
           <Text style={styles.textStyle}>Apply</Text>
         </TouchableHighlight>
@@ -180,7 +180,7 @@ class Search extends Component {
     return (
       <View>
         <View style={styles.container}>
-          <View style={styles.searchContaier}>
+          <View style={styles.searchContanier}>
             <TouchableOpacity
               onPress={this.backToHome}
               style={styles.buttonBack}>
@@ -202,7 +202,7 @@ class Search extends Component {
                 }}
                 value={this.state.search}
                 onChangeText={this.updateSearch}
-                placeholder="Keyword (skill, company, position,...)"
+                placeholder="Search for skills, companies, positions,...)"
                 placeholderTextColor="#44464f"></TextInput>
               <TouchableOpacity
                 style={styles.searchButton}
@@ -249,11 +249,11 @@ class Search extends Component {
             visible={modalVisible}>
             <View style={styles.centeredView}>
               <View style={styles.modalView}>
-                <Text style={{fontSize: 30}}>Job Detail</Text>
+                <Text style={{fontSize: 30}, {fontFamily: 'TimesNewRoman'}}>Job Details</Text>
                 <JobDetail item={item}></JobDetail>
                 <View style={styles.containerButton}>
                   <TouchableHighlight
-                    style={{...styles.openButton, backgroundColor: '#d14545'}}
+                    style={{...styles.openButton, backgroundColor: '#d1b9ae'}}
                     onPress={() => {
                       this.setModalVisible(!modalVisible);
                     }}>
@@ -313,7 +313,7 @@ const styles = StyleSheet.create({
     paddingTop: 10,
     paddingBottom: 100,
   },
-  searchContaier: {
+  searchContainer: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
