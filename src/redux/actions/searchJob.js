@@ -14,7 +14,7 @@ export const searchJob = (query) => async (dispatch) => {
     );
     dispatch({type: SEARCH_JOB_SUCCESS, payload: result.data});
   } catch (error) {
-    const msg = _.get(error.response, 'data.msg') || "Cant't connect network";
+    const msg = _.get(error.response, 'data.msg') || "Can't connect network";
     dispatch({
       type: SEARCH_JOB_FAIL,
       payload: {msg},

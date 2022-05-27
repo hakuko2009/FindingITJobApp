@@ -229,7 +229,7 @@ class Job extends Component {
             onPress={this.searchItem}
             onChangeText={this.updateSearch}
             value={this.state.search}
-            placeholder={'keyword (skill, company, position,...)'}
+            placeholder={'Search for skills, companies, positions,...'}
           />
           <FlatList
             style={styles.flatlist}

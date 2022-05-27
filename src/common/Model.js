@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 
 const windowHeight = Dimensions.get('window').height;
-import {JobDetail} from '../components/job/jobDtail';
+import {JobDetail} from '../components/job/jobDetails';
 import _ from 'lodash';
 const windowWidth = Dimensions.get('window').width;
 const ModalJob = (props) => {
