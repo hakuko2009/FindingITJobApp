@@ -109,9 +109,9 @@ class Companies extends Component {
     try {
       const token = await getData('token');
       if (!token) {
-        Alert.alert('You must be login to follow!', null, [
+        Alert.alert('You must login to follow companies!', null, [
           {
-            text: 'Later',
+            text: 'Maybe later',
             style: 'cancel',
           },
           {

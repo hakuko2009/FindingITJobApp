@@ -96,7 +96,7 @@ class CompanyPost extends Component {
     Complete: this.CompleteRoute,
   });
 
-  showToast = (text, type, duration = 2000, buttonText = 'Okey') => {
+  showToast = (text, type, duration = 2000, buttonText = 'OK') => {
     Toast.show({
       text,
       buttonText,

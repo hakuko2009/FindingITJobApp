@@ -130,8 +130,8 @@ const CardItem = (props) => {
             <TouchableOpacity onPress={() => showDetail(item)} style={{}}>
               <Text
                 style={{
-                  color: '#927874',
-                  backgroundColor: '#d9d2c5',
+                  color: '#f70707',
+                  backgroundColor: '#dae9eb',
                   paddingLeft: 10,
                   paddingRight: 10,
                   borderRadius: 5,

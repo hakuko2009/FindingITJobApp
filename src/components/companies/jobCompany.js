@@ -48,7 +48,7 @@ class JobCompanies extends Component {
   showToast = (msg) => {
     Toast.show({
       text: `${msg}`,
-      buttonText: 'Okey',
+      buttonText: 'OK',
       duration: 3000,
     });
   };
@@ -116,9 +116,9 @@ class JobCompanies extends Component {
 
   iterApplyJob = async () => {
     if (!this.state.role) {
-      Alert.alert('You must be login to apply!', `Pick your option `, [
+      Alert.alert('You must login to apply for this job!', `Pick your option `, [
         {
-          text: 'Later',
+          text: 'Maybe later',
           style: 'cancel',
         },
         {
@@ -154,10 +154,10 @@ class JobCompanies extends Component {
   };
 
   alertLoginSaved = () =>
-    Alert.alert('You must be login to apply!', null, [
+    Alert.alert('You must login to apply!', null, [
       {
-        text: 'Later',
-        style: 'cancel',
+        text: 'Maybe later',
+        style: 'Cancel',
       },
       {
         text: 'Login now',
