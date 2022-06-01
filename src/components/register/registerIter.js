@@ -98,7 +98,7 @@ class Register extends Component {
               source={require('../../assets/image/register.png')}
               style={styles.image}
             />
-            <Text style={styles.text}>Signup Iter</Text>
+            <Text style={styles.text}>Iter Register</Text>
             <View style={styles.form}>
               <TextInput
                 iconName={'user'}
@@ -115,10 +115,10 @@ class Register extends Component {
                 secureTextEntry={true}></TextInput>
               <TextInput
                 iconName={'key'}
-                placeholder={'Confirm password'}
+                placeholder={'Password confirmation'}
                 onChangeText={this.changeTextConfirmPass}
                 secureTextEntry={true}></TextInput>
-              <Button onPress={this.registerAcc} label={'Sign up'}></Button>
+              <Button onPress={this.registerAcc} label={'Register'}></Button>
             </View>
             <View style={styles.textRegisterContainer}>
               <Text style={styles.textRegister1}>Already Registered? </Text>

@@ -51,7 +51,7 @@ class Job extends Component {
   showToast = (msg) => {
     Toast.show({
       text: `${msg}`,
-      buttonText: 'Okey',
+      buttonText: 'OK',
       type: 'success',
       duration: 3000,
     });
@@ -144,10 +144,10 @@ class Job extends Component {
   };
 
   alertLogin = () =>
-    Alert.alert('You must be login to apply!', null, [
+    Alert.alert('You must login to apply!', null, [
       {
-        text: 'Later',
-        style: 'cancel',
+        text: 'Maybe later',
+        style: 'Cancel',
       },
       {
         text: 'Login now',
@@ -158,10 +158,10 @@ class Job extends Component {
       },
     ]);
   alertLoginSaved = () =>
-    Alert.alert('You must be login to apply!', null, [
+    Alert.alert('You must login to apply!', null, [
       {
-        text: 'Later',
-        style: 'cancel',
+        text: 'Maybe later',
+        style: 'Cancel',
       },
       {
         text: 'Login now',
@@ -290,7 +290,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  // modal
+  // model
 
   openButton: {
     borderRadius: 6,
