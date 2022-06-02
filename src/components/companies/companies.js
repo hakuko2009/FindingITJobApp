@@ -200,7 +200,7 @@ class Companies extends Component {
             onPress={this.searchItem}
             onChangeText={this.updateSearch}
             value={this.state.search}
-            placeholder={'Company name...'}
+            placeholder={'Search for company\'s name...'}
           />
           <FlatList
             style={styles.flatlist}

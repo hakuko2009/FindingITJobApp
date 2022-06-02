@@ -20,7 +20,7 @@ export const login = (data) => async (dispatch) => {
 
     dispatch({type: LOGIN_SUCCESS, payload: result.data});
   } catch (error) {
-    const msg = _.get(error.response, 'data.msg') || "Cant't connect network";
+    const msg = _.get(error.response, 'data.msg') || "Error occurred. Please try again";
     dispatch({
       type: LOGIN_FAIL,
       payload: {msg},

@@ -160,7 +160,7 @@ const styles = StyleSheet.create({
   },
   loginEmailBtn: {
     width: '100%',
-    backgroundColor: '#6d94cf',
+    backgroundColor: '#99bcf2',
     borderWidth: 1,
     borderRadius: 10,
     borderColor: '#3989a3',
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
   loginBtn: {
     width: '100%',
     borderColor: '#3989a3',
-    backgroundColor: "#6d94cf",
+    backgroundColor: "#99bcf2",
     borderWidth: 1,
     borderRadius: 10,
     height: 50,
