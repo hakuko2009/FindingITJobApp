@@ -13,7 +13,7 @@ export const getCompanies = (page, take = 10) => async (dispatch) => {
     );
     dispatch({type: COMPANIES_SUCCESS, payload: result.data});
   } catch (error) {
-    const msg = _.get(error.response, 'data.msg') || "Cant't connect network";
+    const msg = _.get(error.response, 'data.msg') || "Error occurred. Please try again";
     dispatch({
       type: COMPANIES_FAIL,
       payload: {msg},

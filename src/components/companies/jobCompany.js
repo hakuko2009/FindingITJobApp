@@ -122,7 +122,7 @@ class JobCompanies extends Component {
           style: 'cancel',
         },
         {
-          text: 'Login',
+          text: 'Login now',
           onPress: () => {
             this.props.navigation.navigate('Login');
             this.setModalVisible(!this.state.modalVisible);

@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     marginLeft: 5,
     marginRight: 5,
-    backgroundColor: '#a5c7e6',
+    backgroundColor: '#cae0de',
     shadowOpacity: 0.6,
     flex: 1,
     display: 'flex',

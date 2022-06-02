@@ -45,8 +45,8 @@ class Search extends Component {
   showToast = (msg) => {
     Toast.show({
       text: `${msg}`,
-      buttonText: 'Okey',
-      duration: 3000,
+      buttonText: 'OK',
+      duration: 5000,
     });
   };
 
@@ -71,9 +71,9 @@ class Search extends Component {
       savedPosts={this.props.savedPost}></CardItem>
   );
   alertLoginSaved = () =>
-    Alert.alert('You must be login to apply!', null, [
+    Alert.alert('You must login to apply for this job!', null, [
       {
-        text: 'Later',
+        text: 'Maybe Later',
         style: 'cancel',
       },
       {
@@ -131,9 +131,9 @@ class Search extends Component {
 
   iterApplyJob = async () => {
     if (!this.state.role) {
-      Alert.alert('You must be login to apply!', `Pick your option `, [
+      Alert.alert('You must login to apply for this job!', `Pick your option `, [
         {
-          text: 'Later',
+          text: 'Maybe later',
           style: 'cancel',
         },
         {
@@ -236,7 +236,7 @@ class Search extends Component {
                   fontSize: hp('3.1%'),
                   padding: 30,
                 }}>
-                Sorry, we couldn't find any results for your search!
+                Sorry, we couldn\'t find any results for your search!
               </Text>
             </View>
           )}
@@ -249,7 +249,7 @@ class Search extends Component {
             visible={modalVisible}>
             <View style={styles.centeredView}>
               <View style={styles.modalView}>
-                <Text style={{fontSize: 30}, {fontFamily: 'TimesNewRoman'}}>Job Details</Text>
+                <Text style={{fontSize: 30}, {fontFamily: 'Poppins-Medium'}}>Job Details</Text>
                 <JobDetail item={item}></JobDetail>
                 <View style={styles.containerButton}>
                   <TouchableHighlight

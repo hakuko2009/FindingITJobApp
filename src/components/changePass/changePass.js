@@ -30,8 +30,8 @@ class changePass extends Component {
   showToast = (msg) => {
     Toast.show({
       text: `${msg}`,
-      buttonText: 'Okey',
-      duration: 3000,
+      buttonText: 'OK',
+      duration: 5000,
     });
   };
 
@@ -43,7 +43,7 @@ class changePass extends Component {
 
   moveToMain = async () => {
     if (!this.validateData()) {
-      this.showToast('Old Password or new Password is empty!');
+      this.showToast('At least one of the fields is empty!');
       return;
     }
     const data = {
@@ -78,21 +78,21 @@ class changePass extends Component {
               <Loader status={this.props.loading} msg={'Updating'}></Loader>
               <Input
                 onChangeText={this.changeTextOldPass}
-                placeholder={'Type password...'}
+                placeholder={'Enter old password...'}
               />
               <Input
                 onChangeText={this.changeTextNewPass}
-                placeholder={'New Password...'}
+                placeholder={'Enter new password...'}
               />
               <Input
                 onChangeText={this.changeTextNewPass}
-                placeholder={'Confirm Password...'}
+                placeholder={'Confirm new password...'}
               />
               <View style={styles.buttonContainer}>
                 <TouchableOpacity
                   style={styles.loginBtn}
                   onPress={this.moveToMain}>
-                  <Text style={{fontFamily: 'Itim-Regular', fontSize: 23}}>
+                  <Text style={{fontFamily: 'TimesNewRoman', fontSize: 23}}>
                     Update
                   </Text>
                 </TouchableOpacity>
@@ -125,8 +125,8 @@ const styles = StyleSheet.create({
   },
   loginBtn: {
     width: wp('50%'),
-    backgroundColor: '#a18ef9',
-    borderRadius: 25,
+    backgroundColor: '#728dcc',
+    borderRadius: 15,
     height: 50,
     alignItems: 'center',
     justifyContent: 'center',

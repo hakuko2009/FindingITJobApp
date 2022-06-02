@@ -159,7 +159,7 @@ const CardItem = (props) => {
 
 const styles = StyleSheet.create({
   item: {
-    height: (hp('100%') - 5) / 5,
+    height: (hp('107%') - 5) / 5,
     marginBottom: 15,
     marginLeft: 15,
     marginRight: 15,
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
     paddingRight: 10,
     paddingTop: 5,
 
-    borderRadius: 15,
+    borderRadius: 10,
     elevation: 1,
   },
   logoContainer: {

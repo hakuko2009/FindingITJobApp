@@ -53,7 +53,7 @@ class Job extends Component {
       text: `${msg}`,
       buttonText: 'OK',
       type: 'success',
-      duration: 3000,
+      duration: 5000,
     });
   };
 
@@ -144,7 +144,7 @@ class Job extends Component {
   };
 
   alertLogin = () =>
-    Alert.alert('You must login to apply!', null, [
+    Alert.alert('You must login to apply for this job!', null, [
       {
         text: 'Maybe later',
         style: 'Cancel',
@@ -158,7 +158,7 @@ class Job extends Component {
       },
     ]);
   alertLoginSaved = () =>
-    Alert.alert('You must login to apply!', null, [
+    Alert.alert('You must login to apply for this jobf!', null, [
       {
         text: 'Maybe later',
         style: 'Cancel',
@@ -202,7 +202,7 @@ class Job extends Component {
     if (this.state.role == 'iter' || !this.state.role) {
       return (
         <TouchableOpacity
-          style={{ ...styles.openButton, backgroundColor: '#37ce3f' }}
+          style={{ ...styles.openButton, backgroundColor: '#53b9db' }}
           onPress={this.iterApplyJob}>
           <Text style={styles.textStyle}>Apply</Text>
         </TouchableOpacity>

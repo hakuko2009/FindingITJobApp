@@ -30,7 +30,7 @@ class Login extends Component {
     };
   }
 
-  showToast = (text, type, duration = 2000, buttonText = 'Got it') => {
+  showToast = (text, type, duration = 5000, buttonText = 'Got it') => {
     Toast.show({
       text,
       buttonText,
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
     marginLeft: wp('15%'),
   },
   text: {
-    fontFamily: 'Sarpanch-Medium',
+    fontFamily: 'Poppins-SemiBold',
     fontSize: 36,
     fontWeight: "bold"
   },
