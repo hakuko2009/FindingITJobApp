@@ -30,6 +30,7 @@ const CardItem = (props) => {
               display: 'flex',
               flexDirection: 'row',
               marginTop: 15,
+              marginBottom: 10
             }}>
             <FontAwesome5
               name={'check-circle'}
@@ -61,6 +62,7 @@ const CardItem = (props) => {
                   : '#9a8072'
               }`,
               fontSize: hp('2.5%'),
+              marginRight: 12,
             }}
           />
         </TouchableOpacity>
@@ -103,7 +105,7 @@ const CardItem = (props) => {
             {renderButtonSaved(savedPosts, item)}
           </View>
           <Text
-            style={{...styles.text, fontSize: hp('2.1%')}}
+            style={{...styles.text, fontSize: hp('2.1%'), color: '#b8020b'}}
             numberOfLines={1}
             ellipsizeMode="tail">
             {_.get(item.company[0], 'name')}
@@ -121,7 +123,7 @@ const CardItem = (props) => {
             </Text>
           </View>
           <View style={styles.fiedlsText}>
-            <FontAwesome5 name={'map-marker-alt'} style={styles.iconText} />
+            <FontAwesome5 name={'map-marker-alt'} style={{...styles.iconText, marginBottom: 5}} />
             <Text style={styles.text} numberOfLines={1} ellipsizeMode="tail">
               {item.address}
             </Text>
@@ -134,6 +136,7 @@ const CardItem = (props) => {
                   backgroundColor: '#dae9eb',
                   paddingLeft: 10,
                   paddingRight: 10,
+                  marginBottom: 5,
                   borderRadius: 5,
                 }}>
                 See more
@@ -145,7 +148,7 @@ const CardItem = (props) => {
                 name={'history'}
                 style={{...styles.iconText, color: 'red'}}
               />
-              <Text style={{marginLeft: 10}}>{item.endTime}</Text>
+              <Text style={{marginLeft: 10, marginBottom: 10}}>{item.endTime}</Text>
             </View>
           </View>
         </View>
@@ -202,7 +205,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: (windowWidth * 1.8) / 3,
-    marginTop: 1,
+    marginTop: 2,
+    marginBottom: 4
   },
 });
 export default CardItem;

@@ -23,8 +23,8 @@ class UpdatePassword extends Component {
   showToast = (msg) => {
     Toast.show({
       text: `${msg}`,
-      buttonText: 'Okey',
-      duration: 3000,
+      buttonText: 'OK',
+      duration: 5000,
     });
   };
 
@@ -42,7 +42,7 @@ class UpdatePassword extends Component {
 
   updatePassword = async () => {
     if (!this.state.password || !this.state.confirmPassword) {
-      this.showToast('data is empty!');
+      this.showToast('Data is empty!');
       return;
     }
     const data = {

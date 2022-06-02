@@ -12,7 +12,7 @@ const FollowButton = (props) => {
     <TouchableOpacity
       style={{
         ...styles.container,
-        backgroundColor: props.isFollow ? '#61BCF9' : '#fff',
+        backgroundColor: props.isFollow ? '#61BCF9' : '#d7f7ef',
       }}
       onPress={props.onPress}>
       <Text style={styles.text}>Follow</Text>
@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
     borderRadius: 7,
   },
   title: {
+    color: '#f7050d',
     fontFamily: 'TimesNewRoman',
-    fontSize: 22,
+    fontSize: 24,
   },
 });

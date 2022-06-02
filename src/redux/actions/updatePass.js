@@ -11,7 +11,7 @@ export const updatePass = (data) => async (dispatch) => {
     const result = await axios.post(UPDATE_PASS_URL, data);
     dispatch({type: UPDATE_PASS_SUCCESS, payload: result.data});
   } catch (error) {
-    const msg = _.get(error.response, 'data.msg') || 'Cant connect network';
+    const msg = _.get(error.response, 'data.msg') || 'Can\'t connect Internet. Please check and try again';
     dispatch({
       type: UPDATE_PASS_FAIL,
       payload: {msg},
