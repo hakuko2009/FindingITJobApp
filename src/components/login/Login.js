@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
     marginLeft: wp('15%'),
   },
   text: {
-    fontFamily: 'TimesNewRoman',
+    fontFamily: 'Sarpanch-Medium',
     fontSize: 36,
     fontWeight: "bold"
   },

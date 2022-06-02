@@ -76,7 +76,7 @@ export class Landing extends Component {
     const {marginLeftAnimA, marginRightAnimB} = this.state;
     return (
       <LinearGradient
-        colors={['#cdaeee', '#88bae0', '#3dc7d0']}
+        colors={['#b7ddeb', '#d3b8e0']}
         style={styles.container}>
         <View style={styles.ovalContainer}>
           <Animated.View
@@ -98,7 +98,7 @@ export class Landing extends Component {
           }}>
           <Image
             source={require('../../assets/image/landing.png')}
-            style={{height: 160, width: 160}}></Image>
+            style={{height: 165, width: 165}}></Image>
         </View>
         <View style={styles.buttonEmailContainer}>
           <TouchableOpacity style={styles.loginEmailBtn} onPress={this.clear}>
@@ -131,14 +131,14 @@ const styles = StyleSheet.create({
     width: 75,
     height: 75,
     borderRadius: 100 / 2,
-    backgroundColor: '#d11111',
+    backgroundColor: '#f21905',
   },
   oval2: {
     position: 'absolute',
     width: 75,
     height: 75,
     borderRadius: 100 / 2,
-    backgroundColor: '#5ae8c9',
+    backgroundColor: '#f09f5d',
   },
   buttonEmailContainer: {
     display: 'flex',
@@ -160,10 +160,10 @@ const styles = StyleSheet.create({
   },
   loginEmailBtn: {
     width: '100%',
-    backgroundColor: 'rgba(51, 100, 183, 0.3)',
+    backgroundColor: '#6d94cf',
     borderWidth: 1,
     borderRadius: 10,
-    borderColor: '#20498c',
+    borderColor: '#3989a3',
     height: 50,
     alignItems: 'center',
     justifyContent: 'center',
@@ -172,8 +172,8 @@ const styles = StyleSheet.create({
   },
   loginBtn: {
     width: '100%',
-    borderColor: '#20498c',
-    backgroundColor: 'rgba(51, 100, 183, 0.3)',
+    borderColor: '#3989a3',
+    backgroundColor: "#6d94cf",
     borderWidth: 1,
     borderRadius: 10,
     height: 50,
@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   loginText: {
-    fontSize: 19,
-    fontFamily: 'Sarpanch-SemiBold',
+    fontSize: 20,
+    fontFamily: 'Itim-Regular',
   },
 });

@@ -49,7 +49,7 @@ class JobCompanies extends Component {
     Toast.show({
       text: `${msg}`,
       buttonText: 'OK',
-      duration: 3000,
+      duration: 5000,
     });
   };
 
@@ -154,7 +154,7 @@ class JobCompanies extends Component {
   };
 
   alertLoginSaved = () =>
-    Alert.alert('You must login to apply!', null, [
+    Alert.alert('You must login to apply for this job!', null, [
       {
         text: 'Maybe later',
         style: 'Cancel',

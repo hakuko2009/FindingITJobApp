@@ -19,7 +19,7 @@ const ModalJob = (props) => {
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
             <Text style={{fontSize: 30, fontFamily: 'Sailors Slant'}}>
-              Job Detail
+              Job Details
             </Text>
             <JobDetail item={props.item}></JobDetail>
             <View style={styles.containerButton}>

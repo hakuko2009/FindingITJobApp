@@ -1,4 +1,4 @@
-const baseUrl = 'https://job-it-cnpmp.herokuapp.com';
+const baseUrl = 'https://finding-it-job.herokuapp.com';
 export const apiUrl = {
   BASE_URL: baseUrl,
   LOGIN_URL: `${baseUrl}/api/v1/auth/login`,
