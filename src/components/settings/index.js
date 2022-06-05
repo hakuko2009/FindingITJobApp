@@ -46,18 +46,14 @@ class Settings extends Component {
         showsVerticalScrollIndicator={false}>
         <View
           style={{
-            backgroundColor: '#0E1442',
+            backgroundColor: '#8dbbe0',
             paddingBottom: 10,
             borderBottomLeftRadius: 30,
             borderBottomRightRadius: 30,
           }}>
           <Image
             style={styles.avatar}
-            source={{
-              uri:
-                _.get(user, 'image') ||
-                'https://res.cloudinary.com/do-an-cnpm/image/upload/v1618073475/person_j0pvho.png',
-            }}
+            source={require('../../assets/image/person.png')}
           />
           <View style={styles.info}>
             <Text style={styles.name}>{_.get(user, 'name')}</Text>
@@ -70,19 +66,19 @@ class Settings extends Component {
         </View>
         <Card
           iconRight={'arrow-alt-circle-right'}
-          content={'Manage Account'}
+          content={'Manage account'}
           onPress={() => this.moveToScreen('My Profile')}
           source={require('../../assets/image/user.png')}></Card>
         {this.props.role == 'iter' ? (
           <Card
             iconRight={'arrow-alt-circle-right'}
-            content={'Saved Posts'}
+            content={'View saved posts'}
             onPress={() => this.moveToScreen('Saved Posts')}
             source={require('../../assets/image/bookmark.png')}></Card>
         ) : null}
         <Card
           iconRight={'arrow-alt-circle-right'}
-          content={'Feedback'}
+          content={'Send feedbacks'}
           onPress={() => this.moveToScreen('Feedback')}
           source={require('../../assets/image/feedback.png')}></Card>
         <Card
@@ -129,8 +125,8 @@ const styles = StyleSheet.create({
     marginLeft: wp('33%'),
   },
   name: {
-    fontSize: 25,
-    fontFamily: 'Itim-Regular',
+    fontSize: 28,
+    fontFamily: 'Poppins-SemiBold',
     color: '#fff',
   },
 
@@ -141,7 +137,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   logout: {
-    backgroundColor: '#c5cdd6',
+    backgroundColor: '#daebeb',
     height: hp('7%'),
     marginTop: hp('4%'),
     marginLeft: wp('5%'),
@@ -152,8 +148,8 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   textLogout: {
-    fontFamily: 'Itim-Regular',
-    fontSize: 19,
-    color: '#d35858',
+    fontFamily: 'Poppins-SemiBold',
+    fontSize: 18,
+    color: '#e61515',
   },
 });

@@ -137,7 +137,7 @@ class Notification extends Component {
               marginTop: 100,
             }}>
             <Text style={{ fontSize: 20, fontWeight: 'bold' }}>
-              You have not any notifications yet
+              You haven'\t received any notifications yet
             </Text>
           </View>
         )}

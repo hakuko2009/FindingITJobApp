@@ -147,7 +147,7 @@ class Job extends Component {
     Alert.alert('You must login to apply for this job!', null, [
       {
         text: 'Maybe later',
-        style: 'Cancel',
+        style: 'cancel',
       },
       {
         text: 'Login now',
@@ -158,10 +158,10 @@ class Job extends Component {
       },
     ]);
   alertLoginSaved = () =>
-    Alert.alert('You must login to apply for this jobf!', null, [
+    Alert.alert('You must login to apply for this job!', null, [
       {
         text: 'Maybe later',
-        style: 'Cancel',
+        style: 'cancel',
       },
       {
         text: 'Login now',

@@ -39,8 +39,8 @@ class Profile extends Component {
   showToast = (msg, type) => {
     Toast.show({
       text: `${msg}`,
-      buttonText: 'Okey',
-      duration: 3000,
+      buttonText: 'OK',
+      duration: 5000,
       type,
     });
   };
@@ -69,7 +69,7 @@ class Profile extends Component {
         imageUrl = '';
       } else {
         const result = await axios.get(
-          `https://job-it-cnpmp.herokuapp.com/api/v1/images`,
+          `https://finding-it-job.herokuapp.com/api/v1/images`,
           {
             headers: {Authorization: `Bearer ${token}`},
           },
@@ -98,7 +98,7 @@ class Profile extends Component {
       if (address != '') data = {...data, address};
       if (phone != '') data = {...data, phone};
       if (imageUrl) data = {...data, address, image: imageUrl};
-      let url = 'https://job-it-cnpmp.herokuapp.com/api/v1/auth/profile';
+      let url = 'https://finding-it-job.herokuapp.com/api/v1/auth/profile';
 
       const res = await axios.patch(url, data, {
         headers: {Authorization: `Bearer ${token}`},

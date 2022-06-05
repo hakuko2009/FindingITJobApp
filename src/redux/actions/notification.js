@@ -18,7 +18,7 @@ export const notifications = () => async (dispatch) => {
     });
     dispatch({type: GET_NOTIFICATIONS_SUCCESS, payload: result.data});
   } catch (error) {
-    const msg = _.get(error.response, 'data.msg') || 'Cant connect network';
+    const msg = _.get(error.response, 'data.msg') || "Error occurred. Please try again";
     dispatch({
       type: GET_NOTIFICATIONS_FAIL,
       payload: {msg},
