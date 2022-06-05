@@ -29,8 +29,8 @@ class Feedback extends Component {
   showToast = (msg, type) => {
     Toast.show({
       text: `${msg}`,
-      buttonText: 'Okey',
-      duration: 3000,
+      buttonText: 'OK',
+      duration: 5000,
       type,
     });
   };
@@ -73,7 +73,7 @@ class Feedback extends Component {
           <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.desInputContainer}>
               <View>
-                <Text style={styles.feedBackText}>Feedback! 😋</Text>
+                <Text style={styles.feedBackText}>Tell us how you feel: </Text>
               </View>
               <View style={styles.faceContainer}>
                 <FontAwesome5 name={'frown'} style={styles.face} />
@@ -87,9 +87,9 @@ class Feedback extends Component {
                 onChangeText={this.changeContent}
                 value={this.state.content}
                 multiline={true}
-                numberOfLines={3}
+                numberOfLines={4}
                 style={styles.desInput}
-                placeholder="Description"
+                placeholder="Please let us know your experience..."
                 autoCorrect={false}
               />
             </View>
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
   loginBtn: {
     width: '80%',
     backgroundColor: '#464e89',
-    borderRadius: 25,
+    borderRadius: 15,
     height: 50,
     alignItems: 'center',
     justifyContent: 'center',
@@ -153,8 +153,8 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   desInput: {
-    height: hp('20%'),
-    width: wp('70%'),
+    height: hp('40%'),
+    width: wp('80%'),
     textAlignVertical: 'top',
     borderRadius: 5,
     fontFamily: 'TimesNewRoman',
@@ -165,8 +165,8 @@ const styles = StyleSheet.create({
   desInputContainer: {
     width: wp('80%'),
     backgroundColor: '#fff',
-    marginTop: hp('20%'),
-    height: hp('40%'),
+    marginTop: 30,
+    height: hp('60%'),
     borderRadius: 10,
     marginLeft: wp('10%'),
     alignItems: 'center',
@@ -179,7 +179,7 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
   },
   feedBackText: {
-    fontSize: 30,
+    fontSize: 24,
     color: '#7b72aa',
   },
   face: {

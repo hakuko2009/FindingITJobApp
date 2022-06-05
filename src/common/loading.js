@@ -14,7 +14,7 @@ export class Loader extends Component {
         animationType={'none'}>
         <View style={styles.modalBackground}>
           <View style={styles.activityIndicatorWrapper}>
-            <ActivityIndicator size="large" color="#00ff00" />
+            <ActivityIndicator size="large" color="#65a1d6" />
             {this.props.msg ? <Text>{this.props.msg}</Text> : null}
           </View>
         </View>

@@ -170,7 +170,7 @@ class JobCompanies extends Component {
     if (this.state.role == 'iter' || !this.state.role) {
       return (
         <TouchableHighlight
-          style={{...styles.openButton, backgroundColor: '#37ce3f'}}
+          style={{...styles.openButton, backgroundColor: '#53b9db'}}
           onPress={this.iterApplyJob}>
           <Text style={styles.textStyle}>Apply</Text>
         </TouchableHighlight>

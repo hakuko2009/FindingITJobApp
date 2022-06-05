@@ -136,8 +136,8 @@ class Notification extends Component {
               alignItems: 'center',
               marginTop: 100,
             }}>
-            <Text style={{ fontSize: 20, fontWeight: 'bold' }}>
-              You haven'\t received any notifications yet
+            <Text style={{ fontSize: 24, fontWeight: 'bold' }}>
+              You have not received any notifications yet
             </Text>
           </View>
         )}

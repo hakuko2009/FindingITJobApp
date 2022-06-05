@@ -336,7 +336,7 @@ const styles = StyleSheet.create({
   },
   buttonAdd: {
     borderWidth: 1,
-    borderColor: 'rgba(0,0,0,0.2)',
+    borderColor: '#00f7ff',
     alignItems: 'center',
     justifyContent: 'center',
     width: 60,
@@ -344,7 +344,7 @@ const styles = StyleSheet.create({
     bottom: 10,
     right: 10,
     height: 60,
-    backgroundColor: '#eebbc3',
+    backgroundColor: '#00f7ff',
     borderRadius: 100,
     shadowColor: 'rgba(0, 0, 0, 0.1)',
     shadowOpacity: 0.8,

@@ -92,7 +92,7 @@ class changePass extends Component {
                 <TouchableOpacity
                   style={styles.loginBtn}
                   onPress={this.moveToMain}>
-                  <Text style={{fontFamily: 'TimesNewRoman', fontSize: 23}}>
+                  <Text style={{fontFamily: 'Itim-Regular', fontSize: 23}}>
                     Update
                   </Text>
                 </TouchableOpacity>
