@@ -21,8 +21,8 @@ const Search = (props) => {
           style={{
             height: 50,
             width: wp('75%'),
-            fontFamily: 'TimesNewRoman',
-            fontSize: 16,
+            fontFamily: 'Poppins-Medium',
+            fontSize: 14,
           }}
           onChangeText={props.onChangeText}
           value={props.value}

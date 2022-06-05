@@ -18,7 +18,7 @@ const Card = (props) => {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: '#c5cdd6',
+    backgroundColor: '#daebeb',
     height: hp('10%'),
     marginTop: hp('2%'),
     marginLeft: wp('5%'),
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   icon: {
-    fontSize: 21,
+    fontSize: 20,
   },
   content: {
     fontSize: 19,
@@ -38,8 +38,8 @@ const styles = StyleSheet.create({
     width: wp('45%'),
   },
   image: {
-    height: 25,
-    width: 25,
+    height: 24,
+    width: 24,
   },
 });
 

@@ -196,7 +196,7 @@ class Search extends Component {
               <TextInput
                 style={{
                   height: 50,
-                  width: wp('65%'),
+                  width: wp('95%'),
                   fontFamily: 'TimesNewRoman',
                   fontSize: 16,
                 }}
@@ -295,7 +295,7 @@ const styles = StyleSheet.create({
   },
   searchInput: {
     height: 50,
-    width: wp('85%'),
+    width: wp('95%'),
     borderColor: '#E0E0E0',
     margin: wp('4%'),
     borderWidth: 1,
