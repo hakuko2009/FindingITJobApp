@@ -49,7 +49,7 @@ class CreatePost extends Component {
     this.setState({showDate: true});
   };
 
-  showToast = (text, type, duration = 2000, buttonText = 'Okey') => {
+  showToast = (text, type, duration = 4000, buttonText = 'OK') => {
     Toast.show({
       text,
       buttonText,
@@ -112,7 +112,7 @@ class CreatePost extends Component {
 
   createCompanyPost = async () => {
     if (!this.validateData()) {
-      this.showToast('Data is empty!', 'warning', 2000, 'Okey');
+      this.showToast('Data is empty!', 'warning', 4000, 'OK');
       return;
     }
     const {
@@ -135,7 +135,7 @@ class CreatePost extends Component {
         title,
       };
       await this.props.createPost(data);
-      this.showToast(this.props.msg, 'info', 2000, 'Okey');
+      this.showToast(this.props.msg, 'info', 4000, 'OK');
       if (this.props.status != 200) {
         return;
       }
@@ -162,7 +162,7 @@ class CreatePost extends Component {
 
   showSkill = () => {
     return (
-      <View style={{height: 300, width: 200}}>
+      <View style={{height: 260, width: 200}}>
         <SelectMultiple
           items={dataSkill}
           selectedItems={this.state.selectedSkill}
@@ -177,7 +177,7 @@ class CreatePost extends Component {
     return (
       <View style={{backgroundColor: '#fffffe', flex: 1}}>
         <Header
-          title={'     Create Post'}
+          title={'Create New Post'}
           left={true}
           hideRight={false}
           color="#0E1442"
@@ -191,9 +191,9 @@ class CreatePost extends Component {
               <View style={styles.container}>
                 <View style={styles.choice}>
                   <TextInput
-                    style={{...styles.textInputChoice, marginLeft: 20}}
+                    style={{...styles.textInputChoice, marginLeft: 60, fontSize: 18}}
                     onChangeText={this.onChangeTitle}
-                    placeholder="Title. . ."></TextInput>
+                    placeholder="       Post Title"></TextInput>
                 </View>
                 <View style={styles.choice}>
                   <FontAwesome5 name={'code'} style={styles.icon} />
@@ -202,11 +202,11 @@ class CreatePost extends Component {
                     style={styles.textInputChoice}
                     editable={false}
                     selectTextOnFocus={false}
-                    placeholder="Skills. . ."></TextInput>
+                    placeholder="Skills"></TextInput>
                   <TouchableOpacity
-                    style={styles.buttonChoice}
+                    style={styles.chooseBtn}
                     onPress={this.showModalSkill}>
-                    <Text>choice</Text>
+                    <Text>Choose</Text>
                   </TouchableOpacity>
                 </View>
                 <View style={styles.containerInput}>
@@ -214,14 +214,14 @@ class CreatePost extends Component {
                   <TextInput
                     style={styles.textInputChoice}
                     onChangeText={this.onChangeSalary}
-                    placeholder="Salary. . ."></TextInput>
+                    placeholder="Salary"></TextInput>
                 </View>
                 <View style={styles.containerInput}>
                   <FontAwesome5 name={'map-marker-alt'} style={styles.icon} />
                   <TextInput
                     style={styles.textInputChoice}
                     onChangeText={this.onChangeAddress}
-                    placeholder="Address. . ."></TextInput>
+                    placeholder="Working address"></TextInput>
                 </View>
 
                 <View style={styles.choice}>
@@ -229,9 +229,9 @@ class CreatePost extends Component {
                   <TextInput
                     value={this.state.endTime}
                     style={styles.textInputChoice}
-                    editable={false}
+                    editable={true}
                     selectTextOnFocus={false}
-                    placeholder="End time. . ."></TextInput>
+                    placeholder="Valid until..."></TextInput>
                   <TouchableOpacity onPress={this.showDatepicker}>
                     <FontAwesome5
                       name={'calendar-alt'}
@@ -253,7 +253,7 @@ class CreatePost extends Component {
                   multiline={true}
                   numberOfLines={6}
                   style={styles.desInput}
-                  placeholder="Description. . ."
+                  placeholder="Detail descriptions. . ."
                   autoCorrect={false}
                 />
                 <TouchableOpacity
@@ -269,28 +269,28 @@ class CreatePost extends Component {
                   visible={modalVisible}>
                   <View style={styles.centeredView}>
                     <View style={styles.modalView}>
-                      <Text style={styles.modalText}>Choose Skill</Text>
+                      <Text style={styles.modalText}>Choose Skills</Text>
                       {this.showSkill()}
                       <View style={styles.containerButton}>
                         <TouchableOpacity
+                            style={{
+                              ...styles.openButton,
+                              backgroundColor: '#00ebc7',
+                            }}
+                            onPress={() => {
+                              this.setModalVisible(!modalVisible);
+                            }}>
+                            <Text style={styles.textStyle}>Add</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
                           style={{
                             ...styles.openButton,
-                            backgroundColor: '#363B59',
+                            backgroundColor: '#3DB2FF',
                           }}
                           onPress={() => {
                             this.cancelSkill(!modalVisible);
                           }}>
                           <Text style={styles.textStyle}>Cancel</Text>
-                        </TouchableOpacity>
-                        <TouchableOpacity
-                          style={{
-                            ...styles.openButton,
-                            backgroundColor: '#00ebc7',
-                          }}
-                          onPress={() => {
-                            this.setModalVisible(!modalVisible);
-                          }}>
-                          <Text style={styles.textStyle}>Add</Text>
                         </TouchableOpacity>
                       </View>
                     </View>
@@ -329,7 +329,7 @@ const styles = StyleSheet.create({
     height: 40,
     borderBottomWidth: 1,
     width: windowWidth * 0.8,
-    marginBottom: 15,
+    marginBottom: 12,
     paddingLeft: 6,
     color: 'black',
   },
@@ -348,14 +348,15 @@ const styles = StyleSheet.create({
     paddingLeft: 6,
     textAlignVertical: 'top',
   },
-  buttonChoice: {
+  chooseBtn: {
     height: 30,
-    width: 50,
+    width: 60,
     backgroundColor: '#a7abcc',
     alignItems: 'center',
     justifyContent: 'center',
     padding: 3,
     marginTop: 5,
+    marginRight: 60,
     borderColor: '#737796',
     borderWidth: 1,
     borderRadius: 4,
@@ -397,7 +398,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold',
     textAlign: 'center',
-    fontFamily: 'Itim-Regular',
+    fontFamily: 'Poppins-Medium',
   },
   containerButton: {
     marginTop: 15,
@@ -406,7 +407,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   modalText: {
-    fontSize: 23,
+    fontSize: 25,
     marginBottom: 10,
     fontFamily: 'Itim-Regular',
   },
@@ -421,16 +422,16 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   buttonCreate: {
-    backgroundColor: '#607f22',
+    backgroundColor: '#464e89',
     width: wp('60%'),
     padding: 10,
-    borderRadius: 6,
+    borderRadius: 8,
     elevation: 2,
     borderWidth: 1,
   },
   icon: {
     marginTop: 12,
-    color: '#96cc2c',
+    color: '#6587c2',
   },
   containerInput: {
     display: 'flex',
