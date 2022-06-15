@@ -236,7 +236,7 @@ class Search extends Component {
                   fontSize: hp('3.1%'),
                   padding: 30,
                 }}>
-                Sorry, we couldn\'t find any results for your search!
+                Sorry, we could not find any results for your search!
               </Text>
             </View>
           )}

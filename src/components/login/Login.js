@@ -67,10 +67,10 @@ class Login extends Component {
       this.props.navigation.navigate('Login');
       return;
     }
-    if (role == 'iter') {
-      this.props.navigation.navigate('MainIter');
-    } else {
+    if (role === 'company') {
       this.props.navigation.navigate('MainCompany');
+    } else {
+      this.props.navigation.navigate('MainIter');
     }
   };
 

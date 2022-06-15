@@ -32,8 +32,8 @@ class Register extends Component {
   showToast = (msg) => {
     Toast.show({
       text: `${msg}`,
-      buttonText: 'Okey',
-      duration: 3000,
+      buttonText: 'OK',
+      duration: 5000,
     });
   };
 
@@ -121,7 +121,7 @@ class Register extends Component {
               <Button onPress={this.registerAcc} label={'Register'}></Button>
             </View>
             <View style={styles.textRegisterContainer}>
-              <Text style={styles.textRegister1}>Already Registered? </Text>
+              <Text style={styles.textRegister1}>Already Registered?</Text>
               <TouchableOpacity onPress={this.moveToLogin}>
                 <Text style={styles.textRegister}>Login</Text>
               </TouchableOpacity>

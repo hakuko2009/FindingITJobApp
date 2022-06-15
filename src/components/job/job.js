@@ -199,7 +199,7 @@ class Job extends Component {
   };
 
   renderButtonApply = () => {
-    if (this.state.role == 'iter' || !this.state.role) {
+    if (this.state.role != 'company' || !this.state.role) {
       return (
         <TouchableOpacity
           style={{ ...styles.openButton, backgroundColor: '#53b9db' }}

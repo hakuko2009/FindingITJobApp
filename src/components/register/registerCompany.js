@@ -32,8 +32,8 @@ class Register extends Component {
   showToast = (msg) => {
     Toast.show({
       text: `${msg}`,
-      buttonText: 'Okey',
-      duration: 3000,
+      buttonText: 'OK',
+      duration: 5000,
     });
   };
 

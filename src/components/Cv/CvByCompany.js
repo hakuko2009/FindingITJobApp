@@ -33,8 +33,8 @@ export default class CvByCompany extends Component {
   showToast = (msg) => {
     Toast.show({
       text: `${msg}`,
-      buttonText: 'Okey',
-      duration: 3000,
+      buttonText: 'OK',
+      duration: 5000,
     });
   };
 
@@ -49,7 +49,7 @@ export default class CvByCompany extends Component {
         const token = await getData('token');
 
         const result = await axios.get(
-          `https://job-it-cnpmp.herokuapp.com/api/v1/cv/${cvId}`,
+          `https://finding-it-job.herokuapp.com/${cvId}`,
           {
             headers: {Authorization: `Bearer ${token}`},
           },
