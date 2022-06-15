@@ -82,7 +82,8 @@ const CardItem = (props) => {
           <FastImage
             style={styles.logo}
             source={{
-              uri: _.get(item.company[0], 'image'),
+              uri: _.get(item.company[0], 'image') ||
+              'https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg',
               priority: FastImage.priority.normal,
             }}
             resizeMode={FastImage.resizeMode.contain}

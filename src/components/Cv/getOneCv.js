@@ -86,7 +86,7 @@ class getOneCv extends Component {
         <View style={styles.container}>
           <ScrollView style={styles.scroll}>
             <View>
-              <Text style={styles.titleList}>You have not created a CV</Text>
+              <Text style={styles.titleList}>You have not created your CV yet</Text>
             </View>
           </ScrollView>
           <TouchableOpacity
@@ -268,7 +268,7 @@ const styles = StyleSheet.create({
     bottom: 10,
     right: 10,
     height: 60,
-    backgroundColor: '#907fa4',
+    backgroundColor: '#00f7ff',
     borderRadius: 100,
     shadowColor: 'rgba(0, 0, 0, 0.1)',
     shadowOpacity: 0.8,

@@ -68,7 +68,11 @@ class Settings extends Component {
           iconRight={'arrow-alt-circle-right'}
           content={'Manage account'}
           onPress={() => this.moveToScreen('My Profile')}
-          source={require('../../assets/image/user.png')}></Card>
+          source={{
+            uri:
+              _.get(user, 'image') ||
+              'https://res.cloudinary.com/do-an-cnpm/image/upload/v1618073475/person_j0pvho.png',
+          }}></Card>
         {this.props.role == 'iter' ? (
           <Card
             iconRight={'arrow-alt-circle-right'}

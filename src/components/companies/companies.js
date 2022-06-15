@@ -67,7 +67,7 @@ class Companies extends Component {
     const token = await getData('token');
     const role = await getData('role');
     let following = [];
-    if (token && role == 'iter') {
+    if (token && role === 'iter') {
       await this.props.getFollowing();
       following = this.props.following;
     }
@@ -138,7 +138,7 @@ class Companies extends Component {
   };
 
   renderFollow = (accountId) => {
-    if (this.state.role == 'iter' || !this.state.role) {
+    if (this.state.role != 'company' || !this.state.role) {
       return (
         <FollowButton
           isFollow={this.state.following.includes(accountId)}
@@ -153,9 +153,10 @@ class Companies extends Component {
         <FastImage
           style={styles.logo}
           source={{
-            uri: _.get(item, 'image'),
-            priority: FastImage.priority.normal,
-          }}
+              uri: _.get(item, 'image') ||
+              'https://www.generationsforpeace.org/wp-content/uploads/2018/03/empty.jpg',
+              priority: FastImage.priority.normal,
+           }}
           resizeMode={FastImage.resizeMode.contain}
         />
         <View style={{ padding: 1, marginLeft: 10, maxWidth: wp('60%') }}>

@@ -42,7 +42,7 @@ export class App extends Component {
     const check = await this.checkLogin();
     if (check) {
       const role = await getData('role');
-      return role == 'iter' ? 'MainIter' : 'MainCompany';
+      return role === 'company' ? 'MainCompany' : 'MainIter';
     }
     return 'Loading';
   })();

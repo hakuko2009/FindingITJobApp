@@ -79,8 +79,8 @@ class Cv extends Component {
   showToast = (msg, type) => {
     Toast.show({
       text: `${msg}`,
-      buttonText: 'Okey',
-      duration: 3000,
+      buttonText: 'OK',
+      duration: 5000,
       type,
     });
   };
@@ -249,8 +249,8 @@ class Cv extends Component {
               <TouchableOpacity
                 onPress={this.handleChoosePhoto}
                 style={styles.buttonAvatar}>
-                <Text style={{fontFamily: 'Itim-Regular', fontSize: 15}}>
-                  Choose Avatar
+                <Text style={{fontFamily: 'Itim-Regular', fontSize: 16}}>
+                  Browse
                 </Text>
               </TouchableOpacity>
               <Input
@@ -387,7 +387,7 @@ const styles = StyleSheet.create({
     marginLeft: wp('20%'),
     marginRight: 35,
     marginTop: 15,
-    backgroundColor: '#adb0ce',
+    backgroundColor: '#3d84b8',
     borderWidth: 1,
     borderColor: '#6b6f9b',
   },
@@ -408,6 +408,7 @@ const styles = StyleSheet.create({
 
   textStyle: {
     color: 'white',
+    fontSize: 19,
     fontWeight: 'bold',
     textAlign: 'center',
     fontFamily: 'Itim-Regular',

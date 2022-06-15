@@ -8,12 +8,13 @@ const {
   GET_NOTIFICATIONS_SUCCESS,
   GET_NOTIFICATIONS_FAIL,
 } = actionType;
+const {GET_NOTIFICATION_LIST} = apiUrl;
 
 export const notifications = () => async (dispatch) => {
   dispatch({type: GET_NOTIFICATIONS});
   try {
     const token = await getData('token');
-    const result = await axios.get(`${apiUrl.BASE_URL}/api/v1/notifications`, {
+    const result = await axios.get(GET_NOTIFICATIONS, {
       headers: {Authorization: `Bearer ${token}`},
     });
     dispatch({type: GET_NOTIFICATIONS_SUCCESS, payload: result.data});

@@ -12,7 +12,7 @@ export const registerIter = (data) => async (dispatch) => {
     result = await axios.post(REGISTER_ITER_URL, data);
     dispatch({type: REGISTER_ITER_SUCCESS, payload: result.data});
   } catch (error) {
-    const msg = _.get(error.response, 'data.msg') || "Cant't connect network";
+    const msg = _.get(error.response, 'data.msg') || "Error occurred. Please try again";
     dispatch({
       type: REGISTER_ITER_FAIL,
       payload: {msg},

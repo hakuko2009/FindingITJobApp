@@ -82,8 +82,8 @@ class UpdateCv extends Component {
   showToast = (msg, type) => {
     Toast.show({
       text: `${msg}`,
-      buttonText: 'Okey',
-      duration: 3000,
+      buttonText: 'OK',
+      duration: 5000,
       type,
     });
   };

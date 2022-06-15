@@ -17,4 +17,5 @@ export const apiUrl = {
   CHANGE_PASSWORD_URL: `${baseUrl}/api/v1/auth/update-password`,
   GET_PROFILE_PATH: `${baseUrl}/api/v1/auth/profile`,
   UPDATE_WAITING_POST_PATH: `${baseUrl}/api/v1/posts/[postId]`,
+  GET_NOTIFICATION_LIST: `${baseUrl}/api/v1/notifications`
 };
