@@ -195,7 +195,7 @@ class Cv extends Component {
     try {
       const token = await getData('token');
       const result = await axios.get(
-        `https://job-it-cnpmp.herokuapp.com/api/v1/images`,
+        `https://finding-it-job.herokuapp.com/api/v1/images`,
         {
           headers: {Authorization: `Bearer ${token}`},
         },
@@ -203,7 +203,7 @@ class Cv extends Component {
       const {signature, timestamp} = _.get(result, 'data.payload');
       // upload
       const upload = await axios.post(
-        `https://api.cloudinary.com/v1_1/do-an-cnpm/image/upload?api_key=484176915684615&timestamp=${timestamp}&signature=${signature}`,
+        `https://api.cloudinary.com/v1_1/articlesgroup/image/upload?api_key=567228543314488&timestamp=${timestamp}&signature=${signature}`,
         this.createFormData(this.state.photo),
         {
           headers: {
@@ -211,7 +211,7 @@ class Cv extends Component {
           },
         },
       );
-      return upload.data.secure_url || null;
+      return upload.data.secure_url || "https://iupac.org/wp-content/uploads/2018/05/default-avatar.png";
     } catch (error) {
       return null;
     }
@@ -257,7 +257,7 @@ class Cv extends Component {
                 value={birthday}
                 editable={false}
                 selectTextOnFocus={false}
-                placeholder="Birthday. . ."
+                placeholder="Date of birth. . ."
                 iconName={'calendar-alt'}
                 onPress={this.showDatepicker}></Input>
               {showDate && (
@@ -279,7 +279,7 @@ class Cv extends Component {
               <Textarea
                 onChangeText={this.onChangesoftSkill}
                 numberOfLines={4}
-                placeholder="Soft Skill"></Textarea>
+                placeholder="Soft Skills"></Textarea>
               <Textarea
                 onChangeText={this.onChangeExperience}
                 numberOfLines={4}

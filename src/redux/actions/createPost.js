@@ -15,7 +15,7 @@ export const createPost = (data) => async (dispatch) => {
     });
     dispatch({type: CREATE_POST_SUCCESS, payload: result.data});
   } catch (error) {
-    const msg = _.get(error.response, 'data.msg') || "Cant't connect network";
+    const msg = _.get(error.response, 'data.msg') || "Error occurred. Please try again";
     dispatch({
       type: CREATE_POST_FAIL,
       payload: {msg},

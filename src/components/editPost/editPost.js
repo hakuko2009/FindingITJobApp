@@ -192,7 +192,7 @@ class EditPost extends Component {
         const postId = this.props.route.params.postId;
         const token = getData('token');
         const result = await axios.get(
-          `https://job-it-cnpmp.herokuapp.com/api/v1/posts/${postId}/detail`,
+          `https://finding-it-job.herokuapp.com/api/v1/posts/${postId}/detail`,
           {
             headers: {Authorization: `Bearer ${token}`},
           },
@@ -333,7 +333,7 @@ class EditPost extends Component {
                   visible={modalVisible}>
                   <View style={styles.centeredView}>
                     <View style={styles.modalView}>
-                      <Text style={styles.modalText}>Choice Skill</Text>
+                      <Text style={styles.modalText}>Choose</Text>
                       {this.showSkill()}
                       <View style={styles.containerButton}>
                         <TouchableOpacity
@@ -485,7 +485,7 @@ const styles = StyleSheet.create({
     marginBottom: 15,
   },
   buttonCreate: {
-    backgroundColor: '#607f22',
+    backgroundColor: '#464e89',
     width: wp('60%'),
     padding: 10,
     borderRadius: 6,
@@ -496,7 +496,7 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginTop: 12,
-    color: '#96cc2c',
+    color: '#6587c2',
   },
   containerInput: {
     display: 'flex',

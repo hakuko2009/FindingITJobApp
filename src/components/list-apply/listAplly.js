@@ -28,7 +28,7 @@ class ApplyList extends Component {
   showToast = (msg, type) => {
     Toast.show({
       text: `${msg}`,
-      buttonText: 'Okey',
+      buttonText: 'OK',
       duration: 3000,
       type,
     });
@@ -42,7 +42,7 @@ class ApplyList extends Component {
       try {
         const token = await getData('token');
         const result = await axios.get(
-          `https://job-it-cnpmp.herokuapp.com/api/v1/posts/${postId}/apply-list`,
+          `https://finding-it-job.herokuapp.com/api/v1/posts/${postId}/apply-list`,
           {
             headers: {Authorization: `Bearer ${token}`},
           },
@@ -83,7 +83,7 @@ class ApplyList extends Component {
   render() {
     const element = (data, index) => (
       <TouchableOpacity onPress={() => this._moveToCv(data)} style={styles.btn}>
-        <Text style={styles.btnText}>Show Cv</Text>
+        <Text style={styles.btnText}>Show CV</Text>
       </TouchableOpacity>
     );
     // if (this.props.status != 200 && this.props.status != 304) {

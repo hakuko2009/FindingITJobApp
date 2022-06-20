@@ -42,6 +42,7 @@ export default class CvByCompany extends Component {
     this.setState({modalVisible: visible});
   };
 
+
   componentDidMount() {
     const cvId = this.props.route.params.cvId;
     const unsubscribe = this.props.navigation.addListener('focus', async () => {
@@ -49,7 +50,7 @@ export default class CvByCompany extends Component {
         const token = await getData('token');
 
         const result = await axios.get(
-          `https://finding-it-job.herokuapp.com/${cvId}`,
+          `https://finding-it-job.herokuapp.com/api/v1/cv/${cvId}`,
           {
             headers: {Authorization: `Bearer ${token}`},
           },
