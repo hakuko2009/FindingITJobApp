@@ -21,7 +21,7 @@ export const getCompanyPost = () => async (dispatch) => {
     });
     dispatch({type: GET_COMPAY_POST_SUCCESS, payload: result.data});
   } catch (error) {
-    const msg = _.get(error.response, 'data.msg') || "Cant't connect network";
+    const msg = _.get(error.response, 'data.msg') || "Error occurred. Please try again";
     dispatch({
       type: GET_COMPAY_POST_FAIL,
       payload: {msg},

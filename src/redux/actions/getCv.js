@@ -17,7 +17,7 @@ export const getCv = () => async (dispatch) => {
     });
     dispatch({type: GET_CV_SUCCESS, payload: result.data});
   } catch (error) {
-    const msg = _.get(error.response, 'data.msg') || "Can't connect network";
+    const msg = _.get(error.response, 'data.msg') || "Error occurred. Please try again";
     dispatch({
       type: GET_CV_FAIL,
       payload: {msg},

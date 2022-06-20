@@ -77,7 +77,7 @@ class Profile extends Component {
 
         const {signature, timestamp} = _.get(result, 'data.payload');
         const upload = await axios.post(
-          `https://api.cloudinary.com/v1_1/do-an-cnpm/image/upload?api_key=484176915684615&timestamp=${timestamp}&signature=${signature}`,
+          `https://api.cloudinary.com/v1_1/articlesgroup/image/upload?api_key=567228543314488&timestamp=${timestamp}&signature=${signature}`,
           this.createFormData(this.state.photo),
           {
             headers: {

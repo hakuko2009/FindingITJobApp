@@ -35,7 +35,7 @@ class getOneCv extends Component {
   showToast = (msg) => {
     Toast.show({
       text: `${msg}`,
-      buttonText: 'Okey',
+      buttonText: 'OK',
       duration: 3000,
     });
   };
@@ -64,7 +64,7 @@ class getOneCv extends Component {
   onOffSendMail = async (isOn) => {
     try {
       if (!this.props.cv) {
-        this.showToast('You need create Cv');
+        this.showToast('You need to create Cv');
         return;
       }
       const token = await getData('token');

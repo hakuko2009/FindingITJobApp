@@ -248,7 +248,7 @@ class UpdateCv extends Component {
     try {
       const token = await getData('token');
       const result = await axios.get(
-        `https://job-it-cnpmp.herokuapp.com/api/v1/images`,
+        `https://finding-it-job.herokuapp.com`,
         {
           headers: {Authorization: `Bearer ${token}`},
         },
@@ -256,7 +256,7 @@ class UpdateCv extends Component {
       const {signature, timestamp} = _.get(result, 'data.payload');
       // upload
       const upload = await axios.post(
-        `https://api.cloudinary.com/v1_1/do-an-cnpm/image/upload?api_key=484176915684615&timestamp=${timestamp}&signature=${signature}`,
+        `https://api.cloudinary.com/v1_1/articlesgroup/image/upload?api_key=567228543314488&timestamp=${timestamp}&signature=${signature}`,
         this.createFormData(this.state.photo),
         {
           headers: {

@@ -17,7 +17,7 @@ export const applyJob = (jobId) => async (dispatch) => {
     });
     dispatch({type: APPLY_JOB_SUCCESS, payload: result.data});
   } catch (error) {
-    const msg = _.get(error.response, 'data.msg') || "Can't connect network";
+    const msg = _.get(error.response, 'data.msg') || "Error occurred. Please try again";
     dispatch({
       type: APPLY_JOB_FAIL,
       payload: {msg},
